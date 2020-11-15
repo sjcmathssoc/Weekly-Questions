@@ -1,0 +1,241 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\footer{}{\thepage}{}
+
+\SolutionEmphasis{\color{red}}
+
+\title{Solutions to Weekly Questions}
+\author{Mathematics Society}
+\date{\texttt{3-11-2019}}
+
+\begin{document}
+%This code creates the text before the first question
+%-------------------------------------------------------------------
+
+
+\maketitle
+
+
+\textbf{Remarks:}
+\begin{itemize}
+    \item Note that the marks allocated \textbf{is directly proportional} to the difficulty.
+    \item Bonus questions are \textbf{not necessarily more difficult}.
+    \item The solution will be released on the following Wednesday.
+\end{itemize}
+
+\vspace{\stretch{.2}}
+
+
+
+
+%-------------------------------------------------------------------
+
+
+\begin{questions}
+
+\question Given \(ax^2 + bx + c = 0\) and \(b^2 > 4ac\), derive the quadratic equation \(x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\).
+
+
+\begin{parts}
+
+\part[2 \half] Find \(e, f, g\) expressed by \(a, b, c\) such that \(ax^2 + bx + c = e(x+f)^2 + g\). \\
+Hint: \( g < 0 \).
+
+
+\begin{solution}
+\begin{align*}
+ax^2+bx+c &= 0 \\
+ax^2+bx+c &= 0 \\
+x^2+\frac{b}{a}x+\frac{c}{a} &= 0 \\
+x^2+2x\left(\frac{b}{2a}\right)+\left(\frac{b}{2a}\right)^2-\left(\frac{b}{2a}\right)^2+\frac{c}{a} &= 0 \\
+\left(x+\frac{b}{2a}\right)^2-\frac{b^2}{4a^2}+\frac{c}{a} &= 0 \\
+\left(x+\frac{b}{2a}\right)^2+\frac{b^2-4ac}{4a^2} &= 0 \\
+\end{align*}
+
+$$e=1,\, f=\frac{b}{2a},\, g=\frac{b^2-4ac}{4a^2}$$
+
+\end{solution}
+
+\vspace{\stretch{1}}
+
+\newpage
+
+\part[\half] Using (a), derive the quadratic equation.
+
+\begin{solution}
+\begin{align*}
+\left(x+\frac{b}{2a}\right)^2+\frac{b^2-4ac}{4a^2} &= 0 \\
+\left(x+\frac{b}{2a}\right)^2 &= \frac{b^2-4ac}{4a^2} \\
+x+\frac{b}{2a} &= \pm\sqrt{\frac{b^2-4ac}{4a^2}} \\
+x+\frac{b}{2a} &= \frac{\pm\sqrt{b^2-4ac}}{2a} \\
+x &= \frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{align*}
+\end{solution}
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+\newpage
+
+
+
+\question Given two coordinates \( (a,b)\) and \((c, d)\).
+
+\begin{parts}
+
+\part[1 \half] Show that if \(ad - bc \neq 0\), then there \textbf{does not exist} \(e,f \neq 0  \) such that \( (ea, eb) + (fc, fd) = (0, 0) \). \\ 
+
+\begin{solution}
+\begin{proof}
+
+Assume there exists such $e,f$ pair. Then,
+
+\begin{align*}
+ea+fc &= 0 \\
+ea &= -fc\\ 
+a &= -\frac{f}{e}c\\
+\end{align*}
+
+\begin{align*}
+eb+fd &= 0 \\
+eb &= -fd\\ 
+b &= -\frac{f}{e}d\\
+\end{align*}
+
+As such,
+\begin{align*}
+ad-bc &= -\frac{f}{e}cd +\frac{f}{e}dc \\
+&= 0
+\end{align*}
+Which contradicts the fact that \( ad-bd \neq 0 \). Hence such pairs do not exist.
+
+\end{proof}
+
+\end{solution}
+
+\newpage
+
+\part[1 \half]  Show that if \(ad - bc = 0\), then there \textbf{exists} \(e,f \neq 0  \) such that \( (ea, eb) + (fc,fd) = (0, 0) \). \\ 
+
+\begin{solution}
+\begin{proof}
+\begin{align*}
+ad-bc &= 0 \\
+ad &= bc
+\end{align*}
+If $a$ or $d$ $= 0$ then either $b$ or $c$ $= 0$. It could be easily seen that the solution is trivial. As such, let us assume \(a,b,c,d \neq 0\)
+
+\begin{align*}
+ea+fc &= 0 \\
+ea &= -fc\\ 
+\frac{a}{c} &= -\frac{f}{e}
+\end{align*}
+
+\begin{align*}
+eb+fd &= 0 \\
+eb &= -fd\\ 
+\frac{b}{d} &= -\frac{f}{e}
+\end{align*}
+
+$ e \neq 0 \because \frac{a}{c} $ is defined.  \(f \neq 0 \because \frac{a}{c} \neq 0\) As such, there exists $e,f\neq 0$ that satisfy the equation.
+
+\end{proof}
+\end{solution}
+
+
+\vspace{\stretch{1}}
+
+\bonuspart[\half] Proof that if \((a,b)\) and \((c,d)\) are colinear with \( (0,0) \) , then \(ad - bc = 0\). \\
+
+\begin{solution}
+\begin{proof}
+If \((a,b)\) and \((c,d)\) are colinear, the slope of the line $(a,b)$ to $(0,0)$ and the slope of the line $(c,d)$ to $(0,0)$ is equivalent. Hence,
+
+\begin{align*}
+    \frac{d}{b} &= \frac{b}{a} \\
+    da &= bc \\
+    ad - bc &= 0 \\
+\end{align*}
+
+\end{proof}
+\end{solution}
+
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+\newpage
+
+
+
+\question \textbf{Prove or disprove} (in \textbf{ZFC}) the following properties of ordinal addition. 
+
+The definitions of ordinal addition are listed below for convinence.
+
+$$\forall\alpha\in \textbf{Ord}$$
+\begin{align*}
+\textrm{(Def.\,i)}&.\,\alpha+0=\alpha\\
+\textrm{(Def.\,ii)}&.\,\alpha+1=\alpha\cup\{\alpha\}\\
+\textrm{(Def.\,iii)}&.\,\alpha+(\beta+1)=(\alpha+\beta)+1,\,\mathrm{for\,all}\,\beta\\
+\textrm{(Def.\,iv)}&.\,\alpha+\beta=\sup\{\alpha+\xi\mid\xi<\beta\},\,\textrm{for all limit ordinal}\,\beta>0\\
+\end{align*}
+
+Note: \textbf{Ord} denotes the class of all ordinals, while $\sup$ denotes the supremum of a set.
+
+\begin{parts}
+
+\part[3] \(\forall\alpha,\beta,\gamma\in \textbf{Ord},\,(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)\)
+\vspace{\stretch{1}}
+
+\begin{solution}
+\begin{proof}
+Let $A=\{\gamma\in\textbf{Ord}\mid\forall\alpha,\beta\in\textbf{Ord},(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)\}$\\
+We will prove by transfinite induction that $A=\textbf{Ord}$
+
+0 case:
+\begin{align*}
+(\alpha+\beta)+0&=\alpha+\beta\\
+\alpha+(\beta+0)&=\alpha+\beta\\
+\end{align*}
+
+Successor case:
+\begin{align*}
+(\alpha+\beta)+(\gamma+1)&=((\alpha+\beta)+\gamma)+1\\
+&=(\alpha+(\beta+\gamma))+1\\
+&=\alpha+(\beta+(\gamma+1))\\
+\end{align*}
+
+Limit case:
+\begin{align*}
+(\alpha+\beta)+\gamma&=\sup\{(\alpha+\beta)+\xi\mid\xi<\gamma\}\\
+&=\sup\{\alpha+(\beta+\xi)\mid\xi<\gamma\}\\
+&=\alpha+(\beta+\gamma)\\
+\end{align*}
+\end{proof}
+\end{solution}
+
+\vspace{\stretch{1}} 
+
+\part[2] \(\forall\alpha,\beta\in \textbf{Ord},\,\alpha+\beta=\beta+\alpha\)
+
+\begin{solution}
+Counterexample: $\omega+1>1+\omega=\omega$
+\end{solution}
+
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+
+
+\newpage
+\end{questions}
+
+\end{document}

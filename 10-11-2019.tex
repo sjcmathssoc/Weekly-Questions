@@ -1,0 +1,161 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+
+%uncomment the following line and \newpage to show solutions
+%\printanswers
+
+\SolutionEmphasis{\color{red}}
+\footer{}{\thepage}{}
+
+\title{Weekly Questions}
+\author{Mathematics Society}
+\date{\texttt{10-11-2019}}
+
+\begin{document}
+%This code creates the text before the first question
+%-------------------------------------------------------------------
+
+
+\maketitle
+
+
+\textbf{Remarks:}
+\begin{itemize}
+    \item Note that the marks allocated \textbf{is directly proportional} to the difficulty.
+    \item Bonus questions are \textbf{not necessarily more difficult}.
+    \item The solution will be released on the following Wednesday.
+\end{itemize}
+
+\vspace{\stretch{.2}}
+
+
+%-------------------------------------------------------------------
+
+
+\begin{questions}
+
+\question Given $\frac{1}{x^4+1} = \frac{Ax+B}{ax^2+bx+c}+\frac{Cx+D}{dx^2+ex+f}$.
+
+\begin{parts}
+
+\part[\half] Factorize $x^4+1$.
+\begin{solution}
+\begin{align*}
+x^4+1&=(x^2)^2+1^2\\
+&=(x^2)^2+2x^2+1^2-2x^2\\
+&=(x^2+1)^2-2x^2\\
+&=(x^2+1)^2-(\sqrt{2}x)^2\\
+&=(x^2+1-\sqrt{2}x)(x^2+1+\sqrt{2}x)\\
+&=(x^2-\sqrt{2}x+1)(x^2+\sqrt{2}x+1)
+\end{align*}
+\end{solution}
+
+\vspace{\stretch{1}}
+
+%\newpage
+
+\part[1 \half] Find solutions to \textit{a, b, c, d, e, f, A, B, C, D}.\\
+Hint: partial fractions decomposition.
+
+\begin{solution}
+
+Let $$\frac{1}{x^4+1} = \frac{Ax+B}{x^2-\sqrt{2}x+1}+\frac{Cx+D}{x^2+\sqrt{2}x+1}$$
+\begin{align*}
+(x^4+1)\left(\frac{1}{x^4+1}\right) =& (x^{4}+1)\left(\frac{Ax+B}{x^2-\sqrt{2}x+1}+\frac{Cx+D}{x^2+\sqrt{2}x+1}\right)\\
+1 =& (Ax+B)(x^2+\sqrt{2}x+1)\\
+&(Cx+D)(x^2-\sqrt{2}x+1)\\
+1 =& Ax^3+\sqrt{2}Ax^2+Ax+Bx^2+\sqrt{2}Bx+B\\
+&+ Cx^3-\sqrt{2}Cx^2+Cx+Dx^2-\sqrt{2}Dx+D\\
+1 =& (A+C)x^3+(\sqrt{2}A+B-\sqrt{2}C+D)x^2\\
+&+ (A+\sqrt{2}B+C-\sqrt{2}D)x+(B+D)
+\end{align*}
+\begin{align*}
+A+C &= 0\\
+\sqrt{2}A+B-\sqrt{2}C+D &= 0\\
+A+\sqrt{2}B+C-\sqrt{2}D &= 0\\
+B+D &= 1
+\end{align*}
+$$A=-\frac{1}{2\sqrt{2}}, \, B=\frac{1}{2} , \, C=\frac{1}{2\sqrt{2}}, \, D=\frac{1}{2}$$
+$$a=1, \, b=-\sqrt{2}, \, c=1, \, d=1, \, e=\sqrt{2}, f=1$$
+\end{solution}
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+%\newpage
+
+
+
+\question Evaluate the following integrals.
+
+\begin{parts}
+
+\part[2] $\int\frac{x}{\sqrt{x^2+1}} \,  dx$.
+
+\begin{solution}
+Let $u =x^2+1$\\
+$$dx = \frac{du}{2x}$$\\
+\begin{align*}
+\int\frac{x}{\sqrt{x^2+1}} \,  dx&= \int\frac{x}{\sqrt{u}} \, \frac{du}{2x}\\
+&= \frac{1}{2}\int\frac{1}{\sqrt{u}} \, du\\
+&= \frac{1}{2}\int u^{-\frac{1}{2}} \, du\\
+&= \frac{1}{2}\cdot\frac{u^{-\frac{1}{2}+1}}{-\frac{1}{2}+1}+C\\
+&= u^{\frac{1}{2}}+C\\
+&= \sqrt{x^2+1}+C\\
+\end{align*}
+\end{solution}
+
+\vspace{\stretch{1}}
+
+\part[1] $\int x^\frac{x}{\ln x}\, dx$.
+
+\begin{solution}
+\begin{align*}
+\int x^\frac{x}{\ln x}\, dx &= \int e^{\ln (x^\frac{x}{\ln x})}\, dx\\
+&= \int e^{\frac{x}{\ln x}\ln x}\, dx\\
+&= \int e^x\, dx\\
+&= e^x+C
+\end{align*}
+\end{solution}
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+%\newpage
+
+
+
+\question Prove the following statements in \textbf{ZFC}.
+
+\begin{parts}
+
+\part[3] There are arbitrarily large limit ordinals. $\forall\alpha,\exists\beta>\alpha$, where $\beta$ is a limit ordinal.
+
+\begin{solution}
+\begin{proof}
+Given $\alpha_{0}\in\textbf{Ord}$, define $\alpha_{n+1}=\alpha_{n}+1$. Let $\beta = \sup\{\alpha_{n}\mid n<\omega\}=\bigcup\{\alpha_{n}\mid n<\omega\}=lim_{n\to\omega}\alpha_{n}$. Since the union of ordinals is an ordinal, $\beta$ is an ordinal. And for every $\gamma<\beta$, there exists $\alpha_{n}>\gamma$, otherwise $\sup\{\alpha_{n}\mid n<\omega\}\leq\gamma$, a contradiction. Thus $\gamma+1<\alpha_{n}+1=\alpha_{n+1}<\beta$, and so $\beta$ is a limit ordinal. Therefore, there are arbitrarily large limit ordinals.
+\end{proof}
+\end{solution}
+
+\vspace{\stretch{1}}
+
+\part[3] Every normal sequence $\langle\gamma_{\alpha}\mid\alpha\in\textbf{Ord}\rangle$ has arbitrarily large fixed points, $\alpha$ such that $\gamma_{\alpha}=\alpha$.
+
+\begin{solution}
+\begin{proof}
+Since $\langle\gamma_{\alpha}\mid\alpha\in\textbf{Ord}\rangle$ is increasing, for every $\beta\in\textbf{Ord}$, there exists $m\in\textbf{Ord}$ such that $\gamma_{m}>\beta$. Now let $\alpha_{0}=\gamma_{m}$, $\alpha_{n+1}=\gamma_{\alpha_{n}}$. Then $\langle\alpha_{n}\mid n\in\gamma\rangle$ is increasing. Let $\alpha=\lim_{n\to\omega}\gamma_{n}$. Repeating the argument in (a), $\alpha$ is a limit ordinal. Hence, $\alpha=\lim_{n\to\omega}\alpha_{n+1}=\lim_{n\to\omega}\gamma_{\alpha_{n}}=\lim_{\xi\to\alpha}\gamma_{\xi}=\gamma_{\lim_{\xi\to\alpha}\alpha}=\gamma_{\alpha}.$
+\end{proof}
+\end{solution}
+
+\vspace{\stretch{1}}
+
+\end{parts}
+
+\end{questions}
+
+\end{document}

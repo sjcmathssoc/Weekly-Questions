@@ -1,0 +1,97 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\footer{}{}{}
+
+\title{Weekly Questions}
+\author{Mathematics Society}
+\date{\texttt{3-11-2019}}
+
+\begin{document}
+%This code creates the text before the first question
+%-------------------------------------------------------------------
+
+
+\maketitle
+
+
+
+\textbf{Remarks:}
+\begin{itemize}
+    \item Note that the marks allocated \textbf{is directly proportional} to the difficulty.
+    \item Bonus questions are \textbf{not necessarily more difficult}.
+    \item The solution will be released on the following Wednesday.
+\end{itemize}
+
+\vspace{\stretch{.2}}
+
+
+
+
+%-------------------------------------------------------------------
+
+
+\begin{questions}
+
+\question Given \(ax^2 + bx + c = 0\) and \(b^2 > 4ac\), derive the quadratic equation \(x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\).
+
+\begin{parts}
+
+\part[2 \half] Find \(e, f, g\) expressed by \(a, b, c\) such that \(ax^2 + bx + c = e(x+f)^2 + g\). \\
+Hint: \( g < 0 \)
+
+\vspace{\stretch{1}} 
+
+\part[\half] Factorize the solution for part a and hence derive the quadratic equation.
+
+\vspace{\stretch{1}} 
+
+\end{parts}
+
+
+
+\question Given two coordinates \( (a,b)\) and \((c, d)\).
+
+\begin{parts}
+
+\part[1 \half] Show that if \(ad - bc \neq 0\), then there \textbf{does not exist} \(e,f \neq 0  \) such that \( (ea, eb) + (fc, fd) = (0, 0) \). \\ 
+\vspace{\stretch{1}} 
+
+\part[1 \half] Show that if \(ad - bc = 0\), then there \textbf{exists} \(e,f \neq 0  \) such that \( (ea, eb) + (fc,fd) = (0, 0) \). \\ 
+\vspace{\stretch{1}}
+
+\bonuspart[\half]  Proof that if \((a,b)\) and \((c,d)\) are colinear with \( (0,0) \) , then \(ad - bc = 0\). \\
+\vspace{\stretch{1}}
+
+\end{parts}
+
+
+
+\question \textbf{Prove or disprove} (in \textbf{ZFC}) the following properties of ordinal addition. 
+
+The definitions of ordinal addition are listed below for convinence.
+
+$$\forall\alpha\in \textbf{Ord}$$
+\begin{align*}
+\textrm{(Def.\,i)}&.\,\alpha+0=\alpha\\
+\textrm{(Def.\,ii)}&.\,\alpha+1=\alpha\cup\{\alpha\}\\
+\textrm{(Def.\,iii)}&.\,\alpha+(\beta+1)=(\alpha+\beta)+1,\,\mathrm{for\,all}\,\beta\\
+\textrm{(Def.\,iv)}&.\,\alpha+\beta=\sup\{\alpha+\xi\mid\xi<\beta\},\,\textrm{for all limit ordinal}\,\beta>0\\
+\end{align*}
+
+Note: \textbf{Ord} denotes the class of all ordinals, while $\sup$ denotes the supremum of a set.
+
+\begin{parts}
+
+\part[3] \( \forall\alpha,\beta,\gamma\in \textbf{Ord},\,(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)\)
+\vspace{\stretch{1}}
+
+\part[2] \(\forall\alpha,\beta\in \textbf{Ord},\,\alpha+\beta=\beta+\alpha\)
+\vspace{\stretch{1}}
+
+
+\end{parts}
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+
+%uncomment the following line and \newpage to show solutions
+\printanswers
+
+\SolutionEmphasis{\color{red}}
+\footer{}{\thepage}{}
+
+\title{Solutions to Weekly Questions}
+\author{Mathematics Society}
+\date{\texttt{1-12-2019}}
+
+\begin{document}
+%This code creates the text before the first question
+%-------------------------------------------------------------------
+
+
+\maketitle
+
+
+\textbf{Remarks:}
+\begin{itemize}
+    \item Note that the marks allocated \textbf{is directly proportional} to the difficulty.
+    \item Bonus questions are \textbf{not necessarily more difficult}.
+    \item The solution will be released on the following Wednesday.
+\end{itemize}
+
+\vspace{\stretch{.2}}
+
+
+%-------------------------------------------------------------------
+
+
+\begin{questions}
+\question Prove by mathematical induction the following:
+
+\begin{parts}
+
+\part[1] $1+2+3+…+n=\frac{n(n+1)}{2}$.
+\begin{solution}
+\begin{proof}
+The proof will be spilt into two parts. The first part is showing that the formula holds for $1$, and the second part is showing that if the formula holds for any $k\in\mathbb{N}$, then it holds for $k+1$ as well.\\
+We show that the formula holds for 1:\\
+\begin{align*}
+1&=\frac{1(1+1)}{2}\\
+&=1\\
+\end{align*}
+Then, we will prove the successor case:\\
+\begin{align*}
+1+2+3+…+k+(k+1)&=\frac{k(k+1)}{2}+(k+1)\\
+&=\frac{(k+1)(k+1)}{2}\\
+&=\frac{(k+1)((k+1)+1)}{2}\\
+\end{align*}
+Thus, we have shown that the formula holds for all natural numbers.
+\end{proof}
+\end{solution}
+\vspace{\stretch{1}}
+\newpage
+
+\part[1] $1^{2}+2^{2}+3^{2}+…+n^{2}=\frac{n(n+1)(2n+1)}{6}$.
+
+\begin{solution}
+\begin{proof}
+We will prove this also by induction.\\
+\begin{align*}
+1^{2}&=\frac{1(1+1)(2+1)}{6}\\
+&=1\\
+\end{align*}
+Successor case:
+\begin{align*}
+1^{2}+2^{2}+3^{2}+…+k^{2}+(k+1)^{2}&=\frac{k(k+1)(2k+1)}{6}+(k+1)^{2}\\
+&=\frac{k(k+1)(2k^{2}+k+6k+1)}{6}\\
+&=\frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}\\
+\end{align*}
+\end{proof}
+\end{solution}
+\end{parts}
+\vspace{\stretch{1}}
+\newpage
+
+
+
+\question[2] Let $(G,\circ)$ be a group and let $(S_{1},\circ)$ and $(S_{2},\circ)$ be it's subgroups. Prove that $(S_{1}\cap S_{2},\circ)$ is a subgroup of $(G,\circ)$.\\
+
+The conditions for being a subgroup (and a group) are listed below for convenience.\\
+Let $(G,\circ)$ be a group. Assume $S$ is a subset of $G$ and $(S,\circ)$ is a group. Then $(S,\circ)$ is a subgroup of $(G,\circ)$.\\
+The requirements for being a group are listed below. $(H,\circ)$ is a group (where $\circ$ is a binary operation on $H$) if and only if:
+
+\begin{align*}
+\textrm{(i)}&.\,\forall a,b\in H, a\circ b\in H.\\
+\textrm{(ii)}&.\,\forall a,b,c\in H, (a\circ b)\circ c=a\circ(b\circ c).\\
+\textrm{(iii)}&.\,\exists e\in H\,\forall a\in H, a\circ e=e=e\circ a.\\
+\textrm{(iv)}&.\,\forall a\in H\,\exists a', a\circ a'=a'\circ a=e.\\
+\end{align*}
+
+\begin{solution}
+\begin{proof}
+We will show that $(S_{1}\cap S_{2},\circ)$ satisfies the conditions for being a subgroup of $(G,\circ)$.\\
+\\
+$S_{1}\cap S_{2}$ is obviously a subset of $G$.
+\\
+For every $a,b\in S_{1}\cap S_{2}$, $a,b\in S_{1}$ and $a,b\in S_{2}$, thus by definition $a\circ b\in S_{1}$ and $a\circ b\in S_{2}$, therefore $a\circ b\in S_{1}\cap S_{2}$.\\
+For every $a,b,c\in S_{1}\cap S_{2}$, $a,b,c\in S_{1}$ and $a,b,c\in S_{2}$, thus by definition $(a\circ b)\circ c=a\circ(b\circ c)$.\\
+$e\in S_{1}$ and $e\in S_{2}$, therefore $e\in S_{1}\cap S_{2}$.\\
+For every $a\in S_{1}$, $a'\in S_{1}$ and similarly for any $a\in S_{2}$, $a'\in S_{2}$. Thus for any $a\in S_{1}\cap S_{2}$, $a'\in S_{1}\cap S_{2}$.
+\end{proof}
+\end{solution}
+\vspace{\stretch{1}}
+\newpage
+
+
+
+\question[3] Prove that the set of all real numbers $\mathbb{R}$ is uncountable.
+
+\begin{solution}
+\begin{proof}
+Assume that $\mathbb{R}$ is countable, and let $j_{0}$, $j_{1}$, $j_{2}$, …,$j_{n}$, …$n\in \mathbb{N}$ be an enumeration of $\mathbb{R}$. Let $a_{0}=j_{0}$ and $y_{0}=j_{s_{0}}$, where $s_{0}$ is the least $s$ such that $a_{0}<j_{s}$. For each $n$ define $a_{n+1}=j_{q_{n}}$ where $q_{n}$ is the least $q$ such that $a_{n}<j_{q}<y_{n}$, and define $y_{n+1}=j_{s_{n}}$, where $s_{n}$ is the least $s$ such that $a_{n+1}<j_{s}<y_{n}$. Now let $a=\sup\{a_{n}\mid n\in\mathbb{N}\}$, it is obvious that $a\neq j_{m}$ for all $m$. Thus $\mathbb{R}$ is uncountable.
+\end{proof}
+\end{solution}
+\vspace{\stretch{1}}
+
+
+
+\end{questions}
+
+\end{document}
